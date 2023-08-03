@@ -33,7 +33,7 @@ public class SecurityConfig {
     }
     @Bean
     public UserDetailsService userDetailsService(PasswordEncoder encoder) {
-        /*UserDetails admin = User.withUsername("Satya")
+        UserDetails admin = User.withUsername("Satya")
                 .password(encoder.encode("Test@1234"))
                 .roles("ADMIN")
                 .build();
@@ -41,8 +41,8 @@ public class SecurityConfig {
                 .password(encoder.encode("Test@1234"))
                 .roles("USER")
                 .build();
-        return new InMemoryUserDetailsManager(admin, user);*/
-        return new UserDetailsServiceImpl();
+        return new InMemoryUserDetailsManager(admin, user);
+       // return new UserDetailsServiceImpl();
     }
     /*@Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration builder) throws Exception {
